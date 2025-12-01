@@ -10,18 +10,18 @@ namespace InsuranceAPI.Dtos.ServiceOrderDtos
     {
         public int Id { get; set; }
         public DateTime IssueDate { get; set; } = DateTime.Now;
-        public required String VictimFullName { get; set; }
-        public required String VictimPolicyNumber { get; set; }
+        public required string VictimFullName { get; set; }
+        public required string VictimPolicyNumber { get; set; }
         public City VictimCity { get; set; }
         public required InsuranceJoinResponse? VictimInsurance { get; set; }
-        public required String VehicleMakerAndModel { get; set; }
-        public required String VehicleLicensePlate { get; set; }
-        public required String VehicleType { get; set; }
-        public required String VehicleSeriesNumber { get; set; }
-        public required String VehicleGenre { get; set; }
+        public required string VehicleMakerAndModel { get; set; }
+        public required string VehicleLicensePlate { get; set; }
+        public required string VehicleType { get; set; }
+        public required string VehicleSeriesNumber { get; set; }
+        public required string VehicleGenre { get; set; }
         public required int VehicleWeight { get; set; }
-        public String? AtFaultFullName { get; set; }
-        public String? AtFaultPolicyNumber { get; set; }
+        public string? AtFaultFullName { get; set; }
+        public string? AtFaultPolicyNumber { get; set; }
         public City? AtFaultCity { get; set; }
         public InsuranceJoinResponse? AtFaultInsurance { get; set; }
         public required ExpertJoinResponse? AssociatedExpert { get; set; }

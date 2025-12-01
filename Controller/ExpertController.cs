@@ -30,9 +30,9 @@ namespace InsuranceAPI.Controller
 
         [HttpGet]
         [Route("/Expert")]
-        public async Task<IActionResult> GetExpertByToken([FromHeader] String token)
+        public async Task<IActionResult> GetExpertByToken([FromHeader] string token)
         {
-            String? reqUserName = Token.DecodeToken(token, _configuration["AppSettings:Token"]);
+            string? reqUserName = Token.DecodeToken(token, _configuration["AppSettings:Token"]);
             if (reqUserName is null)
             {
                 //can't decode token
@@ -191,7 +191,7 @@ namespace InsuranceAPI.Controller
                 return BadRequest("Invalid Structure");
             }
             //decode token to get username
-            String? reqUserName = Token.DecodeToken(expertRequest.Token, _configuration["AppSettings:Token"]);
+            string? reqUserName = Token.DecodeToken(expertRequest.Token, _configuration["AppSettings:Token"]);
             if (reqUserName is null)
             {
                 //user name not found

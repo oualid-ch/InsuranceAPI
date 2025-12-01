@@ -5,7 +5,7 @@ namespace InsuranceAPI.Mappers
 {
     public static class ExpertMapper
     {
-        public static ExpertResponse ToResponseExpertDto(this Expert expertModel, String token)
+        public static ExpertResponse ToResponseExpertDto(this Expert expertModel, string token)
         {
             return new ExpertResponse
             {

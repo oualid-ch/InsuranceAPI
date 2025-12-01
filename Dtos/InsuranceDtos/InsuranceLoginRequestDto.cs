@@ -2,8 +2,8 @@ namespace InsuranceAPI.Dtos.InsuranceDtos
 {
     public class InsuranceLoginRequestDto
     {
-        public required String UserName { get; set; }
-        public required String Password { get; set; }
+        public required string UserName { get; set; }
+        public required string Password { get; set; }
 
     }
 }

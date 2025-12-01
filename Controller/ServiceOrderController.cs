@@ -24,12 +24,12 @@ namespace InsuranceAPI.Controller
 
 
         [HttpGet]
-        public async Task<IActionResult> GetServicesOrder([FromHeader] String userToken)
+        public async Task<IActionResult> GetServicesOrder([FromHeader] string userToken)
         {
             try
             {
                 //get Insurance id from token
-                String userName = Token.DecodeToken(userToken, _configuration["AppSettings:Token"]);
+                string userName = Token.DecodeToken(userToken, _configuration["AppSettings:Token"]);
                 Insurance? selectedInsurance = await _context.Insurance.FirstOrDefaultAsync(i => i.UserName == userName);
                 if (selectedInsurance is not null)
                 {
@@ -117,7 +117,7 @@ namespace InsuranceAPI.Controller
             try
             {
                 //get Insurance id from token
-                String insuranceUserName = Token.DecodeToken(serviceOrderRequest.VictimInsuranceToken, _configuration["AppSettings:Token"]);
+                string insuranceUserName = Token.DecodeToken(serviceOrderRequest.VictimInsuranceToken, _configuration["AppSettings:Token"]);
                 Insurance? selectedInsurance = await _context.Insurance.FirstOrDefaultAsync(i => i.UserName == insuranceUserName);
                 if (selectedInsurance is null)
                 {
@@ -156,7 +156,7 @@ namespace InsuranceAPI.Controller
             try
             {
                 //get Insurance id from token
-                String insuranceUserName = Token.DecodeToken(serviceOrderRequest.VictimInsuranceToken, _configuration["AppSettings:Token"]);
+                string insuranceUserName = Token.DecodeToken(serviceOrderRequest.VictimInsuranceToken, _configuration["AppSettings:Token"]);
                 Insurance? selectedInsurance = await _context.Insurance.FirstOrDefaultAsync(i => i.UserName == insuranceUserName);
                 if (selectedInsurance is null)
                 {
@@ -230,7 +230,7 @@ namespace InsuranceAPI.Controller
             try
             {
                 //get Insurance id from token
-                String insuranceUserName = Token.DecodeToken(serviceOrderRequest.InsuranceToken, _configuration["AppSettings:Token"]);
+                string insuranceUserName = Token.DecodeToken(serviceOrderRequest.InsuranceToken, _configuration["AppSettings:Token"]);
                 Insurance? selectedInsurance = await _context.Insurance.FirstOrDefaultAsync(i => i.UserName == insuranceUserName);
                 if (selectedInsurance is null)
                 {

@@ -4,12 +4,12 @@ namespace InsuranceAPI.Dtos.ExpertDtos
 {
     public class ExpertCreateRequest
     {
-        public required String FirstName { get; set; }
-        public required String LastName { get; set; }
-        public required String UserName { get; set; }
-        public required String Password { get; set; }
-        public required String PhoneNumber { get; set; }
-        public required String Address { get; set; }= String.Empty;
+        public required string FirstName { get; set; }
+        public required string LastName { get; set; }
+        public required string UserName { get; set; }
+        public required string Password { get; set; }
+        public required string PhoneNumber { get; set; }
+        public required string Address { get; set; }= string.Empty;
 
         public required City City { get; set; }
     }

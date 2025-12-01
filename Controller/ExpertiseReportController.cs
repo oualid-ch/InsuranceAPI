@@ -96,7 +96,7 @@ namespace InsuranceAPI.Controller
                 return StatusCode(500,"Invalid Service Order.");
             }
 
-            String insuranceUserName = Token.DecodeToken(expertiseReportRequest.InsuranceToken, _configuration["AppSettings:Token"]);
+            string insuranceUserName = Token.DecodeToken(expertiseReportRequest.InsuranceToken, _configuration["AppSettings:Token"]);
 
             Insurance dbInsurance = await _context.Insurance.FirstOrDefaultAsync(ins => ins.UserName == insuranceUserName);
             if (dbInsurance is null)
@@ -149,7 +149,7 @@ namespace InsuranceAPI.Controller
                 return StatusCode(500,"Invalid Service Order.");
             }
 
-            String insuranceUserName = Token.DecodeToken(expertiseReportRequest.InsuranceToken, _configuration["AppSettings:Token"]);
+            string insuranceUserName = Token.DecodeToken(expertiseReportRequest.InsuranceToken, _configuration["AppSettings:Token"]);
 
             Insurance dbInsurance = await _context.Insurance.FirstOrDefaultAsync(ins => ins.UserName == insuranceUserName);
             if (dbInsurance is null)

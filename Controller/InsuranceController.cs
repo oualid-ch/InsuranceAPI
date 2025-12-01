@@ -28,9 +28,9 @@ namespace cars.Controller
 
         [HttpGet]
         [Route("/Insurance")]
-        public async Task<IActionResult> GetInsuranceByToken([FromHeader] String token)
+        public async Task<IActionResult> GetInsuranceByToken([FromHeader] string token)
         {
-            String? reqUserName = Token.DecodeToken(token, _configuration["AppSettings:Token"]);
+            string? reqUserName = Token.DecodeToken(token, _configuration["AppSettings:Token"]);
             if (reqUserName is null)
             {
                 //can't decode token
@@ -177,7 +177,7 @@ namespace cars.Controller
                 return BadRequest("Invalid Structure");
             }
             //decode token to get username
-            String? reqUserName = Token.DecodeToken(insuranceRequest.Token, _configuration["AppSettings:Token"]);
+            string? reqUserName = Token.DecodeToken(insuranceRequest.Token, _configuration["AppSettings:Token"]);
             if (reqUserName is null)
             {
                 //can't decode token

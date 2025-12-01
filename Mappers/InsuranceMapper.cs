@@ -5,7 +5,7 @@ namespace InsuranceAPI.Mappers
 {
     public static class InsuranceMapper
     {
-        public static InsuranceResponseDto ToResponseInsuranceDto(this Insurance insuranceModel, String token)
+        public static InsuranceResponseDto ToResponseInsuranceDto(this Insurance insuranceModel, string token)
         {
             return new InsuranceResponseDto
             {
